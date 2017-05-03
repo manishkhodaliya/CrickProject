@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.blackhat.mlive.activity.ScriptListFragment"
+    android:background="@drawable/row_backgrpund">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/imgArrow"
+            android:padding="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txtScript"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Script1"
+            android:gravity="left|center_vertical"
+            android:textSize="@dimen/scriptTextSize"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorScript"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            >
+        <TextView
+            android:id="@+id/txtRate1"
+            style="@style/textview"
+
+
+            />
+        <TextView
+            android:id="@+id/txtRate2"
+
+            style="@style/textview"
+            />
+        <TextView
+            android:id="@+id/txtRate3"
+
+            style="@style/textview"
+            />
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_rate2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+        <TextView
+            android:id="@+id/txtRate4"
+            style="@style/textview"
+
+            />
+        <TextView
+            android:id="@+id/txtRate5"
+
+            style="@style/textview"
+            />
+        <TextView
+            android:id="@+id/txtRate6"
+
+            style="@style/textview"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/row_divider"
+       />
+</LinearLayout>

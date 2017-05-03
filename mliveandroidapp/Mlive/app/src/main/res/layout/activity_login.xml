@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/header_background"
+    android:padding="10dp"
+    tools:context="com.example.blackhat.mlive.activity.LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/mlivelogo"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/loginLinearLayout"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="UserName"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/text"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/scriptTextSize"
+            android:backgroundTint="@color/text"
+            />
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/text"
+            android:textColorHint="@color/text"
+            android:backgroundTint="@color/text"/>
+        <CheckBox
+            android:id="@+id/checkRememberLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remember Login"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/text"
+            android:textSize="@dimen/scriptTextSize"
+            android:checked="false"
+            android:backgroundTint="@color/text"
+            android:drawableTint="@color/text"
+            android:foregroundTint="@color/text" />
+
+        <!--
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:entries="@array/server"
+            android:background="@drawable/dropdown"
+            android:layout_height="48dp"></Spinner>
+-->
+
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:background="@drawable/row_backgrpund"
+            android:textAllCaps="false"
+            android:textColor="@color/text"
+            android:textSize="@dimen/scriptTextSize"
+            android:layout_marginTop="@dimen/size"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_below="@id/loginLinearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

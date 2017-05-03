@@ -1,0 +1,177 @@
+<resources>
+
+<style name="marketwatch_view_top_bar">
+    <item name="android:background">@drawable/row_backgrpund</item>
+
+</style>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#232323</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/textColorWhite</item>
+
+    </style>
+
+    <style name="headerLabel">
+        <item name="android:textSize">@dimen/labelSize</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/colorScript</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+<style name="header">
+    <item name="android:textSize">@dimen/labelSize</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_gravity">right</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textColor">@color/textColorWhite</item>
+    <item name="android:layout_marginRight">5dp</item>
+    <item name="android:padding">2dp</item>
+</style>
+    <style name="textview">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">@dimen/scriptTextSize</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_margin">2dp</item>
+        <!--<item name="android:text">5000</item>
+        <item name="android:background">@drawable/buyprice</item>-->
+    </style>
+
+    <style name="log" parent="AppTheme" >
+        <item name="android:colorForeground">@color/textcolorLogin</item>
+        <item name="android:textColorPrimary">@color/textcolorLogin</item>
+        <item name="android:textColorSecondary">@color/textcolorLogin</item>
+    </style>
+
+    <style name="MainMenu">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+         <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+    <style name="LayoutMainMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="BuyPrice">
+        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right</item>
+        <item name="android:background">@drawable/market_depth_row</item>
+        <item name="android:textColor">@color/textColorWhite</item>
+        <item name="android:textSize">@dimen/scriptTextSize</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+<style name="SellPrice">
+    <item name="android:padding">5dp</item>
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:background">@drawable/market_depth_row</item>
+    <item name="android:gravity">left</item>
+    <item name="android:textColor">@color/textColorWhite</item>
+    <item name="android:textSize">@dimen/scriptTextSize</item>
+
+</style>
+
+    <style name="leftvalue">
+        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/market_depth_row</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">@color/textColorWhite</item>
+        <item name="android:textSize">@dimen/scriptTextSize</item>
+
+    </style>
+    <style name="rightvalue">
+        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/market_depth_row</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/textColorWhite</item>
+        <item name="android:textSize">@dimen/scriptTextSize</item>
+
+    </style>
+
+<style name="Description">
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textColor">@color/textColorWhite</item>
+    <item name="android:layout_marginLeft">5dp</item>
+</style>
+
+    <style name="UserProfileTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/scriptTextSize</item>
+        <item name="android:textColor">@color/textColorWhite</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <style name="UserProfileLabel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/labelSize</item>
+        <item name="android:textColor">@color/colorScript</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/mainColor</item>
+    </style>
+
+    <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
+        <item name="tabMaxWidth">@dimen/tab_max_width</item>
+        <item name="tabIndicatorColor">@color/mainColor</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
+        <item name="tabSelectedTextColor">@color/text</item>
+    </style>
+
+    <style name="ProfileList" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/Bess</item>
+    </style>
+
+    <style name="ProfileButton">
+        <item name="android:textColor">@color/textColorWhite</item>
+        <item name="android:textSize">@dimen/labelSize</item>
+    </style>
+
+
+
+</resources>

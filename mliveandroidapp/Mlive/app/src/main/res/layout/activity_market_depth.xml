@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.example.blackhat.mlive.activity.MarketDepth">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/scriptName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Script Name"
+        android:padding="10dp"
+        android:textSize="@dimen/scriptTextSize"
+        android:textColor="@color/colorScript"
+        android:gravity="center"
+        android:background="@drawable/row_backgrpund"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        style="@style/BuyPrice"
+        android:text="Buy Price"
+        />
+        <TextView
+            android:text="Sell Price"
+            style="@style/SellPrice"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/leftvalue"
+            android:text="28500"
+            />
+        <TextView
+            android:text="28498"
+            style="@style/rightvalue"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/BuyPrice"
+            android:text="Buy Qty"
+            />
+        <TextView
+            android:text="Sell Qty"
+            style="@style/SellPrice"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/leftvalue"
+            android:text="10"
+            />
+        <TextView
+            android:text="5"
+            style="@style/rightvalue"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/BuyPrice"
+            android:text="TBQ"
+            />
+        <TextView
+            style="@style/leftvalue"
+            android:text="2"
+            />
+        <TextView
+            android:text="TSQ"
+            style="@style/SellPrice"/>
+        <TextView
+            style="@style/leftvalue"
+            android:text="4"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Volume"
+            style="@style/Description" />
+        <TextView
+            android:text="2"
+            style="@style/Description" />
+        <TextView
+            android:text="LTP"
+            style="@style/Description" />
+        <TextView
+            android:text="2"
+            style="@style/Description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="ATP"
+            style="@style/Description" />
+        <TextView
+            android:text="2"
+            style="@style/Description" />
+        <TextView
+            android:text="LTT"
+            style="@style/Description" />
+        <TextView
+            android:text="2"
+            style="@style/Description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Net Chg"
+            style="@style/Description" />
+        <TextView
+            android:text="2"
+            style="@style/Description" />
+        <TextView
+            android:text="% Chg"
+            style="@style/Description" />
+        <TextView
+            android:text="2"
+            style="@style/Description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="open"
+            style="@style/Description" />
+        <TextView
+            android:text="2"
+            style="@style/Description" />
+        <TextView
+            android:text="Close"
+            style="@style/Description" />
+        <TextView
+            android:text="2"
+            style="@style/Description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="High"
+            style="@style/Description" />
+        <TextView
+            android:text="2"
+            style="@style/Description" />
+        <TextView
+            android:text="Low"
+            style="@style/Description" />
+        <TextView
+            android:text="2"
+            style="@style/Description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Open Int"
+            style="@style/Description" />
+        <TextView
+            android:text="2"
+            style="@style/Description" />
+        <TextView
+            android:text="Val(Cr.)"
+            style="@style/Description" />
+        <TextView
+            android:text="2"
+            style="@style/Description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@drawable/market_depth_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColorWhite"
+        android:text="DPR:"
+        />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorWhite"
+            android:text="22"
+            />
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>

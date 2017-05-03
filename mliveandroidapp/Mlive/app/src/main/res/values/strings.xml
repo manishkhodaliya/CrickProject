@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MLive Lite</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="server">
+        <item>Server1</item>
+        <item>Server2</item>
+    </string-array>
+    <string name="application_trainnig" >Application is training purpose only.</string>
+
+    <string name="notice">Note:- Long Press On Profile Name for Profile Option</string>
+
+    <!--  <string name="marketdepth">Market Depth</string>
+    <string name="highlow">High Low</string>
+    <string name="nextcontract">Next Contract</string>
+    <string name="setalert">Set Alert</string>
+    <string name="setdefault">Set Default</string>
+    <string name="removescript">Remove Script</string>
+    <string name="close">Close</string>-->
+
+
+</resources>

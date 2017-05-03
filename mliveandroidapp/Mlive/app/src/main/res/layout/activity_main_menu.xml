@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context="com.example.blackhat.mlive.activity.MainMenuActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/row_divider" />
+    <TextView
+
+        android:padding="10dp"
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:background="@drawable/row_backgrpund"
+        android:textSize="@dimen/bottomTextSize"
+        android:textColor="@color/text"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/row_divider" />
+
+    <LinearLayout
+
+        style="@style/LayoutMainMenu">
+
+
+        <ImageView
+            style="@style/MainMenu"
+            android:id="@+id/imgMarketWatch"
+            android:src="@mipmap/marketwatch"
+            />
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:src="@mipmap/profile"
+            style="@style/MainMenu"
+            />
+        <ImageView
+            android:src="@mipmap/alerts"
+            style="@style/MainMenu"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LayoutMainMenu">
+
+
+        <ImageView
+            android:src="@mipmap/markettips"
+            style="@style/MainMenu"
+            />
+        <ImageView
+            android:src="@mipmap/history"
+            style="@style/MainMenu"
+            />
+
+        <ImageView
+            android:src="@mipmap/commex"
+            style="@style/MainMenu"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LayoutMainMenu">
+
+        <ImageView
+            android:src="@mipmap/intradaychart"
+            style="@style/MainMenu"
+            />
+        <ImageView
+            android:src="@mipmap/highlow"
+            style="@style/MainMenu"
+            />
+        <ImageView
+            android:src="@mipmap/closingrate"
+            style="@style/MainMenu"
+            />
+     </LinearLayout>
+
+    <LinearLayout
+        style="@style/LayoutMainMenu">
+        <ImageView
+            android:src="@mipmap/settings"
+            style="@style/MainMenu"
+            />
+
+        <ImageView
+            android:src="@mipmap/myaccount"
+            style="@style/MainMenu"
+            />
+        <ImageView
+            android:src="@mipmap/password"
+            style="@style/MainMenu"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LayoutMainMenu">
+
+        <ImageView
+            android:src="@mipmap/contactus"
+            style="@style/MainMenu"
+            />
+
+        <ImageView
+            android:src="@mipmap/logout"
+            style="@style/MainMenu"
+            />
+        <ImageView
+            style="@style/MainMenu"
+            />
+
+    </LinearLayout>
+    <RelativeLayout
+        style="@style/LayoutMainMenu">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:id="@+id/scrollingtext"
+            android:lines="1"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:textColor="@color/text"
+            android:singleLine="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Powererd By Mlive Lite" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+    </LinearLayout>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/application_trainnig"
+        android:gravity="center"
+        android:background="@drawable/row_backgrpund"
+        android:textSize="@dimen/labelSize"
+        android:textColor="@color/text"
+        />
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/row_backgrpund"
+    tools:context="com.example.blackhat.mlive.activity.UserProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:text="First name"
+        style="@style/UserProfileLabel"
+        />
+    <TextView
+        android:id="@+id/txtFirstName"
+        android:text="Mashahoor"
+        style="@style/UserProfileTextView"/>
+
+        <TextView
+            android:text="Last name"
+            style="@style/UserProfileLabel"
+            />
+        <TextView
+        android:id="@+id/txtLastName"
+        android:text="Gulati"
+        style="@style/UserProfileTextView"/>
+
+        <TextView
+            android:text="Mobile No"
+            style="@style/UserProfileLabel"
+            />
+        <TextView
+        android:id="@+id/txtMobileNo"
+        android:text="9898989898"
+        style="@style/UserProfileTextView"/>
+
+        <TextView
+            android:text="Email ID"
+            style="@style/UserProfileLabel"
+            />
+    <TextView
+        android:id="@+id/txtEmailID"
+        android:text="mgulati@sony.com"
+        style="@style/UserProfileTextView"/>
+
+        <TextView
+            android:text="City"
+            style="@style/UserProfileLabel"
+            />
+        <TextView
+            android:id="@+id/txtCity"
+            style="@style/UserProfileTextView"
+            android:text="Mumbai" />
+
+        <TextView
+            android:text="Expiry Date"
+            style="@style/UserProfileLabel"
+            />
+        <TextView
+        android:id="@+id/txtExpiryDate"
+        android:text="02/04/2020"
+        style="@style/UserProfileTextView"/>
+    </LinearLayout>
+
+</ScrollView>

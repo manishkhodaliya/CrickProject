@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/tab_padding_bottom"
+    android:background="@color/textHintColor"
+    tools:context="com.example.blackhat.mlive.activity.ProfileList">
+
+    <TextView
+        android:id="@+id/notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/notice"/>
+
+    <LinearLayout
+        android:layout_below="@+id/notice"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <EditText
+        android:id="@+id/editPortfolio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Portfolio Name"
+        android:textSize="@dimen/scriptTextSize"/>
+
+    <Button
+        android:id="@+id/addPortfolio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_button"
+        android:text="Add PORTFOLIO"
+        style="@style/ProfileButton"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/profileRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnDefault"
+            android:background="@drawable/round_button"
+            android:text="Default"
+            android:visibility="invisible"
+            android:layout_marginBottom="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/ProfileButton"/>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_marginLeft="5dp"
+            android:visibility="invisible"
+            android:background="@drawable/round_button_red"
+            android:text="Delete"
+            android:layout_marginBottom="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/ProfileButton"/>
+    </LinearLayout>
+</RelativeLayout>
