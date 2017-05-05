@@ -14,15 +14,14 @@
 
         <TextView
             android:textColor="@color/text"
-            android:text="DEFAULT"
             android:layout_marginLeft="@dimen/mainMenuMarginTop"
             android:textSize="@dimen/labelSize"
-            android:id="@+id/txtProfile"
+            android:id="@+id/txtProfileName"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
-        <ImageView
+     <!--   <ImageView
             android:id="@+id/delete"
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/mainMenuMarginTop"
@@ -30,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:src="@drawable/bin"
-            />
+            />-->
 
     </RelativeLayout>
 

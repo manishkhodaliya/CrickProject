@@ -3,6 +3,7 @@ package com.example.blackhat.mlive.fragment;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -24,6 +25,8 @@ import com.example.blackhat.mlive.pojo.Portfolio;
 import com.example.blackhat.mlive.pojo.Profile;
 import com.example.blackhat.mlive.util.AppConstant;
 import com.example.blackhat.mlive.util.ApplicationUtils;
+import com.example.blackhat.mlive.util.ComplexPreferences;
+import com.example.blackhat.mlive.util.RecyclerItemClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,13 +43,12 @@ public class ViewScripts extends Fragment {
     ProgressDialog mProgressProfile;
     List<Portfolio> scriptList;
 
+    SharedPreferences preferences;
+    ProgressDialog mProgress;
+
     public ViewScripts()
     {
 
-    }
-
-    public ViewScripts(String profileid) {
-        new ViewScriptTask("1956",profileid).execute();
     }
 
 
@@ -55,8 +57,10 @@ public class ViewScripts extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
+        View view=inflater.inflate(R.layout.fragment_view_scripts, container, false);
 
-        return inflater.inflate(R.layout.fragment_view_scripts, container, false);
+
+        return view;
     }
 
 
@@ -65,15 +69,42 @@ public class ViewScripts extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
 
+        mProgress = new ProgressDialog(getContext());
+        mProgress.setCancelable(Boolean.TRUE);
+        mProgress.setMessage(AppConstant.MESSAGE_GETTING_DATA);
+        mProgress.show();
+
+        preferences = getContext().getSharedPreferences(AppConstant.PREF_LOGIN, 0);
+        System.out.println("User id " + preferences.getInt("User", 0));
+        System.out.println("Profile id " + preferences.getString("profileid", null));
+
+
+        new ViewScriptTask("" + preferences.getInt("User", 0), preferences.getString("profileid", null)).execute();
+
         recyclerView = (RecyclerView) getView().findViewById(R.id.viewScriptRecylerView);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(llm);
 
-        //System.out.println("Demodata="+demoData.size());
+        //recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), recyclerView, new RecyclerItemClickListener.OnItemClickListener() );
 
+        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+
+                System.out.println("selected script="+scriptList.get(position).getScriptname());
+
+            }
+
+            @Override
+            public void onLongItemClick(View view, int position) {
+
+            }
+        }));
     }
+
+
 
 
     public class ViewScriptTask extends AsyncTask<Void, Void, Boolean> {
@@ -99,7 +130,7 @@ public class ViewScripts extends Fragment {
                 Portfolio profile1 = ApplicationUtils.generateObjectFromJSON(
                         ApplicationUtils.generateJSONFromObject(demoData.get(i)), Portfolio.class);
 
-                System.out.println("profile_name=" +profile1.getScriptname() );
+               // System.out.println("profile_name=" +profile1.getScriptname() );
 
                 scriptList.add(profile1);
             }
@@ -113,6 +144,8 @@ public class ViewScripts extends Fragment {
             super.onPostExecute(aBoolean);
             adapter = new PortfolioAdapter(scriptList);
             recyclerView.setAdapter(adapter);
+
+            mProgress.dismiss();
         }
     }
 

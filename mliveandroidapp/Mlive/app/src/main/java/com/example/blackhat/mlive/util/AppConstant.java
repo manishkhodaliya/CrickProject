@@ -32,6 +32,7 @@ public final class AppConstant {
     public static final String GETUSERPROFILE="://mlive.bcommo.in:76/appmediator/index.php/welcome/getResult";
     public static final String PROFILE_URI="://mlive.bcommo.in:188/Profile.asmx/getUserProfile";
     public static final String GETSCRIPT="://mlive.bcommo.in:76/appmediator/index.php/Home/getUserProfilesItems";
+    public static final String ADDPROFILE="://mlive.bcommo.in:188/Profile.asmx/add_profile";
 
     public static final String CONTENT_TYPE = "Content-Type";
     public static final String APPLICATION_X_FORM_URL = "application/x-www-form-urlencoded";

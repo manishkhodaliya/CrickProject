@@ -46,8 +46,10 @@ public class LoginActivity extends AppCompatActivity {
     EditText editUsername, editPassword;
     CheckBox check;
     Button btnLogin;
+
     ProgressDialog mProgress;
     ProgressDialog mProgressProfile;
+
     SharedPreferences pref;
     SharedPreferences.Editor editor;
     ComplexPreferences complexPreferences;
@@ -137,6 +139,7 @@ public class LoginActivity extends AppCompatActivity {
         private final String server;
 
         SharedPreferences preferences;
+        SharedPreferences.Editor editor;
         User user;
 
         UserLoginTask( String Server,String email, String password ) {
@@ -145,6 +148,7 @@ public class LoginActivity extends AppCompatActivity {
             this.mPassword = password;
             this.server = Server;
             this.preferences = getApplicationContext().getSharedPreferences( AppConstant.PREF_LOGIN, 0 );
+            this.editor=preferences.edit();
 
         }
 
@@ -157,18 +161,18 @@ public class LoginActivity extends AppCompatActivity {
                     user = ApplicationUtils.generateObjectFromJSON( ApplicationUtils.generateJSONFromObject( httpCallResponse.getData().get( AppConstant.OBJ_U )),User.class );
                     if ( user !=null ){
                         
-                        final SharedPreferences.Editor editor = preferences.edit();
 
                         if( user.getUserid() == 0 )
                         {
                             preferences.edit().clear().commit();
-
                             System.out.println( "Preference Cleared" );
 
                         }
 
                         else{
-
+                            System.out.println("user "+user.getUserid());
+                            editor.putInt("User",user.getUserid());
+                            editor.commit();
 
                             preferencesForUser.putObject( AppConstant.PREF_USER, user );
                             preferencesForUser.commit();

@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.blackhat.mlive.R;
 import com.example.blackhat.mlive.pojo.User;
+import com.example.blackhat.mlive.util.AppConstant;
 
 public class MainMenuActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -30,7 +31,7 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
         imgMarketWatch = (ImageView) findViewById(R.id.imgMarketWatch);
         imgProfile = (ImageView) findViewById(R.id.imgProfile);
 
-        preferences = getApplicationContext().getSharedPreferences("LoginPref", 0);
+        preferences = getApplicationContext().getSharedPreferences(AppConstant.PREF_LOGIN, 0);
         editor = preferences.edit();
         //SharedPreferences preferences=getApplicationContext().getSharedPreferences("LoginPref", 0);
         //final SharedPreferences.Editor editor = preferences.edit();
